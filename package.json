@@ -1,0 +1,30 @@
+{
+  "name": "support_desk",
+  "version": "1.0.0",
+  "description": "support desk app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrickPei747/support_desk.git"
+  },
+  "author": "Patrick Pei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PatrickPei747/support_desk/issues"
+  },
+  "homepage": "https://github.com/PatrickPei747/support_desk#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
