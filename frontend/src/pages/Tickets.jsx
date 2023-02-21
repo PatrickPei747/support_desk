@@ -29,17 +29,24 @@ function Tickets() {
   return (
     <>
       <BackButton />
-      <h1>Tickets</h1>
-      <div className='tickets'>
-        <div className="ticket-headings">
-            <div>Date</div>
-            <div>Product</div>
-            <div>Status</div>
+      {tickets.length > 0 ? (
+        <div>
+          {' '}
+          <h1>Tickets</h1>
+          <div className='tickets'>
+            <div className='ticket-headings'>
+              <div>Date</div>
+              <div>Product</div>
+              <div>Status</div>
+            </div>
+            {tickets.map((ticket) => (
+              <TicketItem key={ticket._id} ticket={ticket} />
+            ))}
+          </div>
         </div>
-        {tickets.map((ticket) => (
-            <TicketItem key={ticket._id} ticket={ticket} />
-        ))}
-      </div>
+      ) : (
+        <h1 className='no-ticket'>You don't have any ticket yet!</h1>
+      )}
     </>
   );
 }

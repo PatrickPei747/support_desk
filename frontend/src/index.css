@@ -91,6 +91,11 @@ h3 {
   animation: moveInRight 1.2s ease-out;
 }
 
+.no-ticket {
+  color: #828282;
+  animation: moveInLeft 1.2s ease-out;
+}
+
 .boxes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -289,6 +294,38 @@ h3 {
   border-radius: 5px;
 }
 
+.note {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.note-head {
+  background: #f4f4f4;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.note-date {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 14px;
+}
+
+.delete-note {
+  color: red;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
 
 .btn-close {
   background: none;
@@ -362,28 +399,28 @@ footer {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px)
+    transform: translateX(-100px);
   }
   80% {
-    transform: translateX(10px)
+    transform: translateX(10px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0)
+    transform: translateX(0);
   }
 }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px)
+    transform: translateX(100px);
   }
   80% {
-    transform: translateX(-10px)
+    transform: translateX(-10px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0)
+    transform: translateX(0);
   }
 }
 
