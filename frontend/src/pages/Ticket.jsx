@@ -14,22 +14,29 @@ import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 import NoteItem from '../components/NoteItem';
 
-const customStyles = {
-  content: {
-    width: '600px',
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    position: 'relative',
-  },
-};
-
-Modal.setAppElement('#root');
-
 function Ticket() {
+  function isSmallScreen() {
+    if (window.innerWidth < 500) {
+      return true;
+    }
+    return false;
+  }
+  
+  const customStyles = {
+    content: {
+      width: isSmallScreen() ? '300px' : '600px',
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      position: 'relative',
+    },
+  };
+
+  Modal.setAppElement('#root');
+  
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [noteText, setNoteText] = useState('');
 
@@ -68,7 +75,7 @@ function Ticket() {
   const handleNoteSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(createNote({noteText, ticketId}))
+    dispatch(createNote({ noteText, ticketId }));
     closeModal();
   };
 

@@ -424,7 +424,7 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .boxes {
     grid-template-columns: 1fr;
   }
@@ -440,5 +440,23 @@ footer {
 
   .heading p {
     font-size: 1.5rem;
+  }
+
+  .ticket,
+  .ticket-headings {
+    font-size: 14px;
+  }
+  .ticket-production {
+    width: 70px;
+  }
+
+  .status {
+    width: 70px;
+    padding:0 5px;
+  }
+
+  .btn-sm {
+    padding: 3px 1px;
+    font-size: 10px;
   }
 }
